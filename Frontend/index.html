@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Brinquedos - CRUD</title>
+</head>
+<body>
+  <h1>Lista de Brinquedos</h1>
+  <button onclick="getBrinquedos()">Carregar</button>
+  <ul id="listaBrinquedos"></ul>
+
+  <script>
+    const api = "https://localhost:5001/brinquedos";
+
+    async function getBrinquedos() {
+      const res = await fetch(api);
+      const brinquedos = await res.json();
+      const lista = document.getElementById("listaBrinquedos");
+      lista.innerHTML = "";
+      brinquedos.forEach(b => {
+        const li = document.createElement("li");
+        li.innerText = `${b.nome_brinquedo} - R$${b.preco}`;
+        lista.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
