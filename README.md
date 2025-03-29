@@ -1,3 +1,9 @@
+#Integrantes
+ - Cauã Ferrigolli - RM553093
+ - Sabrina da Motta Café - RM553568
+ - Luís Henrique - RM552692
+ - Matheus Duarte - RM554199
+   
 # Brinquedos API
 
 Este projeto consiste em uma API RESTful desenvolvida com ASP.NET Core para gerenciar brinquedos, clientes e vendedores de uma loja infantil.
